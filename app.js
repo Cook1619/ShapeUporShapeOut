@@ -6,12 +6,19 @@ let circleBtn = document.getElementById('create-circle');
 circleBtn.addEventListener('click', insertCircle);
 let triangleBtn = document.getElementById('create-right-triangle');
 triangleBtn.addEventListener('click', insertTriangle)
+let container = document.getElementById('shape-container');
+const MAX = 700;
 
 class Shape {
-    constructor(width, height, background){
-        this.width = width;
-        this.height = height;
-        this.background = background;
+    constructor(width, height, x , y){
+        this.div = document.createElement('div');
+        this.div.classList.add('shape');
+        this.div.style.left = `${x}px`;
+        this.div.style.top = `${y}px`;
+        this.div.width = width;
+        this.div.height = height;
+        container.appendChild(this.div);
+        
     }
     removeShape(){
 
@@ -51,7 +58,9 @@ class Square extends Rectangle {
 
 
 function insertRectangle(){
-    alert('connected!')
+    let xval = randomValue(0,MAX);
+    let yval = randomValue(0,MAX);
+    let rect = new Rectangle(xVal, yVal);
 }
 function insertSquare() {
     alert('connected!')

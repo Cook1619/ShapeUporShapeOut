@@ -7,7 +7,7 @@ button {
     margin-left: 10px;
     margin-top: 5px;
 }
-.shape-container {
+#shape-container {
     height: 600px;
     width: 600px;
     background-color: brown;
