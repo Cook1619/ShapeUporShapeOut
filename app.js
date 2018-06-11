@@ -1,20 +1,11 @@
 let rectBtn =  document.getElementById('create-rectangle');
-rectBtn.addEventListener('click', function(){
-    alert('hello');
-})
-let squaretBtn = document.getElementById('create-square');
-squareBtn.addEventListener('click', function () {
-    alert('hello');
-})
+rectBtn.addEventListener('click', insertRectangle);
+let squareBtn = document.getElementById('create-square');
+squareBtn.addEventListener('click', insertSquare);
 let circleBtn = document.getElementById('create-circle');
-circleBtn.addEventListener('click', function () {
-    alert('hello');
-})
+circleBtn.addEventListener('click', insertCircle);
 let triangleBtn = document.getElementById('create-right-triangle');
-triangleBtn.addEventListener('click', function () {
-    alert('hello');
-})
-
+triangleBtn.addEventListener('click', insertTriangle)
 
 class Shape {
     constructor(width, height, background){
@@ -56,5 +47,22 @@ class Square extends Rectangle {
         super(width, height, background)
 
     }
+}
+
+
+function insertRectangle(){
+    alert('connected!')
+}
+function insertSquare() {
+    alert('connected!')
+}
+function insertCircle() {
+    alert('connected!')
+}
+function insertTriangle() {
+    alert('connected!')
+}
+function randomValue(min, max){
+    return Math.floor(Math.random() * (max -mix)) + min;
 }
 
