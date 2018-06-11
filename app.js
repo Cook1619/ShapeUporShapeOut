@@ -79,8 +79,14 @@ function insertRectangle(){
     // let xval = randomValue(0,MAX);
     // let yval = randomValue(0,MAX);
     // let rect = new Rectangle(xVal, yVal);
-    console.log(rectHeight.value);
-    console.log(rectHeight.value);
+    rectHeight.value = rectHeight;
+    rectWidth.value = rectWidth;
+    div = document.createElement('div');
+    div.style.width = `${rectWidth}px`;
+    div.style.height = `${rectHeight}px`;
+    div.style.backgroundColor = 'green';
+    document.body.appendChild(div);
+   
 }
 function insertSquare() {
     alert('connected!')
