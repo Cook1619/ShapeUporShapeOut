@@ -7,19 +7,29 @@ circleBtn.addEventListener('click', insertCircle);
 let triangleBtn = document.getElementById('create-right-triangle');
 triangleBtn.addEventListener('click', insertTriangle)
 
+
 let container = document.getElementById('shape-container');
-const MAX = 700;
+const min = 0;
+const max = 700;
+
 
 class Shape {
-    constructor(width, height, x , y){
+    constructor(width, height, x , y, shapeName, radius, area, perimeter){
         this.div = document.createElement('div');
         this.div.classList.add('shape');
         this.div.style.left = `${x}px`;
         this.div.style.top = `${y}px`;
         this.div.width = width;
         this.div.height = height;
+        this.shapeName = shapeName;
+        this.radius = radius;
+        this.area = area;
+        this.perimeter = perimeter;
         container.appendChild(this.div);
         
+    }
+    insertShape(){
+
     }
     removeShape(){
 
