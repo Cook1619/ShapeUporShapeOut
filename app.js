@@ -1,3 +1,9 @@
+let rectHeight = document.getElementById("rectHeight");
+let rectWidth = document.getElementById("rectWidth");
+
+
+
+
 let rectBtn =  document.getElementById('create-rectangle');
 rectBtn.addEventListener('click', insertRectangle);
 let squareBtn = document.getElementById('create-square');
@@ -6,6 +12,7 @@ let circleBtn = document.getElementById('create-circle');
 circleBtn.addEventListener('click', insertCircle);
 let triangleBtn = document.getElementById('create-right-triangle');
 triangleBtn.addEventListener('click', insertTriangle)
+
 
 
 let container = document.getElementById('shape-container');
@@ -69,9 +76,11 @@ class Square extends Rectangle {
 
 
 function insertRectangle(){
-    let xval = randomValue(0,MAX);
-    let yval = randomValue(0,MAX);
-    let rect = new Rectangle(xVal, yVal);
+    // let xval = randomValue(0,MAX);
+    // let yval = randomValue(0,MAX);
+    // let rect = new Rectangle(xVal, yVal);
+    console.log(rectHeight.value);
+    console.log(rectHeight.value);
 }
 function insertSquare() {
     alert('connected!')
