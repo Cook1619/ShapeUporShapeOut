@@ -82,10 +82,12 @@ function insertRectangle(){
     rectHeight.value = rectHeight;
     rectWidth.value = rectWidth;
     div = document.createElement('div');
+    shapeDiv = document.getElementById('shape-container');
     div.style.width = `${rectWidth}px`;
     div.style.height = `${rectHeight}px`;
     div.style.backgroundColor = 'green';
-    document.body.appendChild(div);
+    shapeDiv.appendChild(div);
+    document.body.appendChild(shapeDiv);
    
 }
 function insertSquare() {
