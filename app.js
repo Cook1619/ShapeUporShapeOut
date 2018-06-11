@@ -6,6 +6,7 @@ let circleBtn = document.getElementById('create-circle');
 circleBtn.addEventListener('click', insertCircle);
 let triangleBtn = document.getElementById('create-right-triangle');
 triangleBtn.addEventListener('click', insertTriangle)
+
 let container = document.getElementById('shape-container');
 const MAX = 700;
 
@@ -72,6 +73,6 @@ function insertTriangle() {
     alert('connected!')
 }
 function randomValue(min, max){
-    return Math.floor(Math.random() * (max -mix)) + min;
+    return Math.floor(Math.random() * (max -min)) + min;
 }
 
