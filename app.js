@@ -79,9 +79,6 @@ function insertRectangle(){
     // let rect = new Rectangle(xVal, yVal);
     let rectHeight = document.getElementById("rectHeight").value;
     let rectWidth = document.getElementById("rectWidth").value;
-
-    console.log(rectWidth);
-    console.log(rectHeight);
     div = document.createElement('div');
     shapeDiv = document.getElementById('shape-container');
     div.style.width = `${rectWidth}px`;
@@ -92,10 +89,17 @@ function insertRectangle(){
    
 }
 function insertSquare() {
-    alert('connected!')
-}
+    let sqside = document.getElementById('sq-side').value;
+    div = document.createElement('div');
+    shapeDiv = document.getElementById('shape-container');
+    div.style.width = `${sqside}px`;
+    div.style.height = `${sqside}px`;
+    div.style.backgroundColor = 'red';
+    shapeDiv.appendChild(div);
+    document.body.appendChild(shapeDiv);
+}   
 function insertCircle() {
-    alert('connected!')
+    
 }
 function insertTriangle() {
     alert('connected!')
