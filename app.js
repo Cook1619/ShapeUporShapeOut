@@ -1,5 +1,5 @@
 
-let rectBtn =  document.getElementById('create-rectangle');
+let rectBtn = document.getElementById('create-rectangle');
 rectBtn.addEventListener('click', insertRectangle);
 let squareBtn = document.getElementById('create-square');
 squareBtn.addEventListener('click', insertSquare);
@@ -9,14 +9,13 @@ let triangleBtn = document.getElementById('create-right-triangle');
 triangleBtn.addEventListener('click', insertTriangle)
 
 
-
 let container = document.getElementById('shape-container');
 const min = 0;
-const max = 700;
+const max = 600;
 
 
 class Shape {
-    constructor(width, height, x , y, shapeName, radius, area, perimeter){
+    constructor(width, height, x, y, shapeName, radius, area, perimeter) {
         this.div = document.createElement('div');
         this.div.classList.add('shape');
         this.div.style.left = `${x}px`;
@@ -28,52 +27,57 @@ class Shape {
         this.area = area;
         this.perimeter = perimeter;
         container.appendChild(this.div);
-        
-    }
-    insertShape(){
 
     }
-    removeShape(){
+    insertShape() {
+        let xval = randomValue(0, MAX);
+        let yval = randomValue(0, MAX);
+        let shape = new Shape(xVal, yVal);
+    }
+    removeShape() {
 
     }
-    describe(){
+    describe() {
 
     }
 }
 
-class Circle extends Shape{
-    constructor(width, height, background, radius){
-        super(width, height, background)
+class Circle extends Shape {
+    constructor(width, height,radius) {
+        super(width, height)
         this.radius = radius;
     }
 }
 
 class Triangle extends Shape {
-    constructor(width, height, background) {
-        super(width, height, background)
+    constructor(width, height) {
+        super(width, height)
 
     }
 }
 
 class Rectangle extends Shape {
-    constructor(width, height, background) {
-        super(width, height, background)
+    constructor(width, height) {
+        super(width, height)
 
+    }
+    insertShape(){
+        let xval = randomValue(0, MAX);
+        let yval = randomValue(0, MAX);
+        let rect = new Rectangle(xVal, yVal);
     }
 }
 
 class Square extends Rectangle {
-    constructor(width, height, background) {
-        super(width, height, background)
+    constructor(width, height) {
+        super(width, height)
 
     }
 }
 
 
-function insertRectangle(){
-    // let xval = randomValue(0,MAX);
-    // let yval = randomValue(0,MAX);
-    // let rect = new Rectangle(xVal, yVal);
+function insertRectangle() {
+
     let rectHeight = document.getElementById("rectHeight").value;
     let rectWidth = document.getElementById("rectWidth").value;
     let div = document.createElement('div');
@@ -83,18 +87,19 @@ function insertRectangle(){
     div.style.backgroundColor = 'green';
     shapeDiv.appendChild(div);
     document.body.appendChild(shapeDiv);
-   
+
 }
 function insertSquare() {
     let sqside = document.getElementById('sq-side').value;
     let div = document.createElement('div');
     let shapeDiv = document.getElementById('shape-container');
+    div.classList.add('square');
     div.style.width = `${sqside}px`;
     div.style.height = `${sqside}px`;
     div.style.backgroundColor = 'red';
     shapeDiv.appendChild(div);
     document.body.appendChild(shapeDiv);
-}   
+}
 function insertCircle() {
     let circleRad = document.getElementById('circle-rad').value;
     let div = document.createElement('div');
@@ -119,7 +124,7 @@ function insertTriangle() {
     shapeDiv.appendChild(div);
     document.body.appendChild(shapeDiv);
 }
-function randomValue(min, max){
-    return Math.floor(Math.random() * (max -min)) + min;
+function randomValue(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 

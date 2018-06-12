@@ -11,4 +11,8 @@ button {
     height: 600px;
     width: 600px;
     background-color: brown;
+    position: relative;
+}
+.square{
+    position: absolute;
 }
