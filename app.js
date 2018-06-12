@@ -1,7 +1,4 @@
 
-
-
-
 let rectBtn =  document.getElementById('create-rectangle');
 rectBtn.addEventListener('click', insertRectangle);
 let squareBtn = document.getElementById('create-square');
@@ -99,7 +96,16 @@ function insertSquare() {
     document.body.appendChild(shapeDiv);
 }   
 function insertCircle() {
-    
+    let circleRad = document.getElementById('circle-rad').value;
+    div = document.createElement('div');
+    shapeDiv = document.getElementById('shape-container');
+    div.style.width = `${circleRad}px`;
+    div.style.height = `${circleRad}px`;
+    div.style.backgroundColor = 'purple';
+    div.style.borderRadius = '50px';
+    shapeDiv.appendChild(div);
+    document.body.appendChild(shapeDiv);
+
 }
 function insertTriangle() {
     alert('connected!')
