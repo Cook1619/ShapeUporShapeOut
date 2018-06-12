@@ -76,8 +76,8 @@ function insertRectangle(){
     // let rect = new Rectangle(xVal, yVal);
     let rectHeight = document.getElementById("rectHeight").value;
     let rectWidth = document.getElementById("rectWidth").value;
-    div = document.createElement('div');
-    shapeDiv = document.getElementById('shape-container');
+    let div = document.createElement('div');
+    let shapeDiv = document.getElementById('shape-container');
     div.style.width = `${rectWidth}px`;
     div.style.height = `${rectHeight}px`;
     div.style.backgroundColor = 'green';
@@ -87,8 +87,8 @@ function insertRectangle(){
 }
 function insertSquare() {
     let sqside = document.getElementById('sq-side').value;
-    div = document.createElement('div');
-    shapeDiv = document.getElementById('shape-container');
+    let div = document.createElement('div');
+    let shapeDiv = document.getElementById('shape-container');
     div.style.width = `${sqside}px`;
     div.style.height = `${sqside}px`;
     div.style.backgroundColor = 'red';
@@ -97,8 +97,8 @@ function insertSquare() {
 }   
 function insertCircle() {
     let circleRad = document.getElementById('circle-rad').value;
-    div = document.createElement('div');
-    shapeDiv = document.getElementById('shape-container');
+    let div = document.createElement('div');
+    let shapeDiv = document.getElementById('shape-container');
     div.style.width = `${circleRad}px`;
     div.style.height = `${circleRad}px`;
     div.style.backgroundColor = 'purple';
@@ -108,7 +108,16 @@ function insertCircle() {
 
 }
 function insertTriangle() {
-    alert('connected!')
+    let rightTri = document.getElementById('rightTri').value;
+    let div = document.createElement('div');
+    let shapeDiv = document.getElementById('shape-container');
+    div.style.width = '0';
+    div.style.height = '0';
+    div.style.borderLeft = `${rightTri}px solid transparent`;
+    div.style.borderRight = `${rightTri}px solid transparent`;
+    div.style.borderBottom = `${rightTri}px solid blue`;
+    shapeDiv.appendChild(div);
+    document.body.appendChild(shapeDiv);
 }
 function randomValue(min, max){
     return Math.floor(Math.random() * (max -min)) + min;
