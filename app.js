@@ -1,5 +1,3 @@
-let rectHeight = document.getElementById("rectHeight");
-let rectWidth = document.getElementById("rectWidth");
 
 
 
@@ -79,8 +77,11 @@ function insertRectangle(){
     // let xval = randomValue(0,MAX);
     // let yval = randomValue(0,MAX);
     // let rect = new Rectangle(xVal, yVal);
-    rectHeight.value = rectHeight;
-    rectWidth.value = rectWidth;
+    let rectHeight = document.getElementById("rectHeight").value;
+    let rectWidth = document.getElementById("rectWidth").value;
+
+    console.log(rectWidth);
+    console.log(rectHeight);
     div = document.createElement('div');
     shapeDiv = document.getElementById('shape-container');
     div.style.width = `${rectWidth}px`;
